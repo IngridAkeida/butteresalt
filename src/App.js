@@ -10,7 +10,8 @@ export default () => {
 
   const [ movieList, setMovieList ] = useState([]);
   const [ featuredData, setFeaturedData ] = useState(null);
-  const [ blackHeader, setBlackHeader ] = useState(false);
+  const [ yellowHeader, setYellowHeader ] = useState(false);
+  const [ colorHeader, setColorHeader ] = useState(false);
 
 
   useEffect(() => {
@@ -19,6 +20,7 @@ export default () => {
       // Pagando a lista total  
       let list = await tmdb.getHomeList();
       setMovieList(list);
+      console.log(list)
 
       //Pegando o filme em destaque (Featured)
       
@@ -28,7 +30,6 @@ export default () => {
       let chosenInfo = await tmdb.getMovieInfo(chosen.id, 'tv');
 
       setFeaturedData(chosenInfo);
-
     }
 
     loadAll();
@@ -37,10 +38,11 @@ export default () => {
   useEffect(()=>{
     const scrollListener = () =>{
       if(window.scrollY > 10){
-
-        setBlackHeader(true);
+        setYellowHeader(true);
+        setColorHeader(true);
       } else {
-        setBlackHeader(false);
+        setYellowHeader(false);
+        setColorHeader(false);
       }
     }
     window.addEventListener('scroll', scrollListener);
@@ -55,7 +57,7 @@ export default () => {
 
     <div className='page'>
 
-      <Header black={blackHeader} />
+      <Header yellow={yellowHeader} color={colorHeader}/>
 
       {featuredData &&
         <FeaturedMovie item={featuredData}/>
@@ -67,10 +69,8 @@ export default () => {
         ))}
       </section>
       <footer>
-        Feito com <span role="img" aria-label='Heart'>❤</span> por B7 Web<br/>
-        Adaptado com ódio no <span role="img" aria-label='Heart'>❤</span> (brincadeirinha) por mim <a href='https://ingrid-akeida.netlify.app/' target='blank' className='link'>Ingrid Sanches</a><br/>
+        Feito com ódio no <span role="img" aria-label='Heart'>❤</span> por mim (brincadeirinha) <a href='https://ingrid-akeida.netlify.app/' target='blank' className='link'>Ingrid Sanches</a><br/>
         Projeto de estudo sem fins lucrativos<br/>
-        Direitos de imagem para <strong>Netflix</strong><br/>
         Dados obtidos no site <a href='https://www.themoviedb.org/' target='blank' className='link'>TMDB</a> 
 
       </footer>
