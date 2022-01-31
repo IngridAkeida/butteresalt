@@ -34,7 +34,8 @@
     position: absolute;
     width: 40px;
     height: 225px;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgb(254, 211, 5, 0.7);
+    color: rgb(0, 0, 0, 0.6);
     z-index: 99;
     display: flex;
     align-items: center;

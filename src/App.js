@@ -18,18 +18,20 @@ export default () => {
     const loadAll = async () => {
       
       // Pagando a lista total  
+      
       let list = await tmdb.getHomeList();
       setMovieList(list);
       console.log(list)
 
       //Pegando o filme em destaque (Featured)
       
-      let originals = list.filter(i=>i.slug === 'originals');
+      let originals = list.filter(i=>i.slug === 'toprated');
       let randomChosen = Math.floor(Math.random() * (originals[0].items.results.length - 1));
       let chosen = originals[0].items.results[randomChosen];
-      let chosenInfo = await tmdb.getMovieInfo(chosen.id, 'tv');
+      let chosenInfo = await tmdb.getMovieInfo(chosen.id, 'movie');
 
       setFeaturedData(chosenInfo);
+      console.log(chosenInfo)
     }
 
     loadAll();

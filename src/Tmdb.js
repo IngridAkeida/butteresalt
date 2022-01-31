@@ -65,6 +65,11 @@ export default {
                 title: 'Documentário',
                 items: await basicFetch (`/discover/movie?with_genres=99&language=pt-BR&api_key=${API_KEY}`)
             },
+            {
+                slug: 'company',
+                title: 'Streams',
+                items: await basicFetch (`/discover/movie?api_key=${API_KEY}&language=en-US&sort_by=primary_release_date.desc&page=1&with_companies=420|19551|38679|2301|13252`)
+            },
         ];
     },
     getMovieInfo: async (movieId, type) => {
