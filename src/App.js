@@ -4,6 +4,9 @@ import tmdb from './Tmdb';
 import MovieRow from './components/MovieRow';
 import FeaturedMovie from './components/FeaturedMovie';
 import Header from './components/Header';
+{/*import Search from './Search';*/}
+
+
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default () => {
@@ -76,6 +79,7 @@ export default () => {
         Dados obtidos no site <a href='https://www.themoviedb.org/' target='blank' className='link'>TMDB</a> 
 
       </footer>
+        {/*<Search/>*/}
 
       {movieList <= 0 &&
         <div className='loading'>
