@@ -1,10 +1,17 @@
-import React, {Component} from "react";
+import React, {useState} from "react";
 import './Header.css';
-import {BrowserRouter, Route, Switch, Link} from 'react-router-dom'
+{/*import {BrowserRouter, Route, Switch, Link} from 'react-router-dom'*/}
 
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default ({yellow, color}) => {
+
+    const [search, setSearch] = useState("");
+
+    /*function handleSearch(e){
+        setSearch(e.target.value)
+
+    }*/
     return(
         <header className={yellow ? 'yellow' : ''}>
 
@@ -14,11 +21,17 @@ export default ({yellow, color}) => {
                         <img src="image/butteresaltyellow.png" alt="butteresaltyellow"/>
                     </a>
                 </div>
-                <div className="header--ask">
-                    <a className={color ? 'color' : ''} href="/">
-                        <p>Pesquisar</p>
-                    </a>
-                </div>
+                    <form action="" className="header--ask">
+                        <input 
+                            className="header--form" 
+                            type="text" 
+                            name="search" 
+                            id="search" 
+                            onChange={(e)=> setSearch(e.target.value)}
+                        />
+                        <button type="submit" className="searchcss">Pesquisar</button>
+                    </form>   
+                
                 <div className="header--user">
                     <a href="/">
                         <img src="image/user.png" alt="User"/>
