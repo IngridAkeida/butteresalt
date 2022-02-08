@@ -59,7 +59,7 @@ export default ({title, items, item}) => {
                             <img key={key} src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} alt={item.original_title}/>
                                 <div className='movierow--info'>
                                     <div className='movieRow--data'>
-                                        <div className='movieRow--title'>{item.original_title}</div>
+                                        <div className='movieRow--title'>{item.title || item.name}</div>
                                         <div className='movieRow--point'>{item.vote_average} Pontos</div>
                                         {/*<div className='movieRow--year'>{date.getFullYear()}</div>*/}
                                     </div>

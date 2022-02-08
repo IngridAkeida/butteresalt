@@ -38,7 +38,7 @@ export default ({item}) => {
                         Destaques da semana:
                     </div>
                     <div className='featured--name'>
-                        {item.original_title}
+                        {item.title}
                     </div>
                     <div className='featured--info'>
                         <div className='featured--points'>{item.vote_average} Pontos </div>
