@@ -1,5 +1,13 @@
 import React, {useState} from "react";
 import './Header.css';
+import SearchIcon from '@mui/icons-material/Search';
+import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
+import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
+import DeleteIcon from '@mui/icons-material/Delete';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import ReadMoreIcon from '@mui/icons-material/ReadMore';
+
 {/*import {BrowserRouter, Route, Switch, Link} from 'react-router-dom'*/}
 
 
@@ -29,7 +37,7 @@ export default ({yellow, color}) => {
                             id="search" 
                             onChange={(e)=> setSearch(e.target.value)}
                         />
-                        <button type="submit" className="searchcss">Pesquisar</button>
+                        <button type="submit" className="searchcss"><SearchIcon/></button>
                     </form>   
                 
                 <div className="header--user">

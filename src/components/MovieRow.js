@@ -2,9 +2,17 @@ import React, { useState } from 'react';
 import './MovieRow.css'
 import ArrowRight from '@mui/icons-material/ArrowRight';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
+import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
+//import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
+//import DeleteIcon from '@mui/icons-material/Delete';
+//import FavoriteIcon from '@mui/icons-material/Favorite';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+//import ReadMoreIcon from '@mui/icons-material/ReadMore';
+import BookIcon from '@mui/icons-material/Book';
+
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default ({title, items}) => {
+export default ({title, items, item}) => {
     const [scrollX, setScrollX] = useState(0);
 
     const handleLeftArrow = () => {
@@ -17,18 +25,22 @@ export default ({title, items}) => {
     }
     const handleRightArrow = () => {
         let x = scrollX - Math.round(window.innerWidth/2);
-        let listW = items.results.length * 150;
+        let listW = items.results.length * 200;
 
         if((window.innerWidth - listW) > x){
             x = (window.innerWidth - listW) - 60;
         }
         setScrollX(x);
     }
+    //let date = new Date (item.release_date)
+    //console.log(item.release_date)
+    //console.log(item)
 
     return (
         <div className='movieRow'>
 
             <h2>{title}</h2>
+
             <div className='movieRow--left' onClick={handleLeftArrow}>
                 <ArrowLeftIcon style={{fontsize:50}}/>
             </div>
@@ -36,14 +48,27 @@ export default ({title, items}) => {
             <div className='movieRow--right' onClick={handleRightArrow}>
                 <ArrowRight style={{fontsize:50}}/>
             </div>
+
             <div className='movieRow--listarea'>
                 <div className='movieRow--list' style={{
                     marginLeft: scrollX,
-                    width: items.results.length * 150
+                    width: items.results.length * 200
                 }}>
                     {items.results.length > 0 && items.results.map((item, key)=>(                  
                         <div key={key} className='movieRow--item'>
                             <img key={key} src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} alt={item.original_title}/>
+                                <div className='movierow--info'>
+                                    <div className='movieRow--data'>
+                                        <div className='movieRow--title'>{item.original_title}</div>
+                                        <div className='movieRow--point'>{item.vote_average} Pontos</div>
+                                        {/*<div className='movieRow--year'>{date.getFullYear()}</div>*/}
+                                    </div>
+                                    <div className='movierow--buttons'>              
+                                    <a href={`/`} className='movierow--buttons1' ><PlaylistAddIcon/></a>
+                                    <a href={`/`} className='movierow--buttons2' ><FavoriteBorderIcon/></a>
+                                    <a href={`/`} className='movierow--buttons3' ><BookIcon/></a>                    
+                                    </div> 
+                                </div>
                         </div>
                     ))}
                 </div>    

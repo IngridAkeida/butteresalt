@@ -4,7 +4,25 @@ import tmdb from './Tmdb';
 import MovieRow from './components/MovieRow';
 import FeaturedMovie from './components/FeaturedMovie';
 import Header from './components/Header';
+//import { BrowserRouter } from 'react-router-dom';
 {/*import Search from './Search';*/}
+
+{/*function App() {
+  return(
+    <div>
+      <Header/>
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/" component={Lancamentos}/>
+            <Route exact="/lancamentos" component={Lancamentos}/>
+            <Route exact="/sobre" component={Sobre}/>
+            <Route exact="/busca" component={Busca}/>
+          </Switch>
+        </BrowserRouter>
+    </div>
+
+  );
+}*/}
 
 
 
@@ -24,7 +42,7 @@ export default () => {
       
       let list = await tmdb.getHomeList();
       setMovieList(list);
-      console.log(list)
+      //console.log(list)
 
       //Pegando o filme em destaque (Featured)
       
@@ -34,7 +52,7 @@ export default () => {
       let chosenInfo = await tmdb.getMovieInfo(chosen.id, 'movie');
 
       setFeaturedData(chosenInfo);
-      console.log(chosenInfo)
+      //console.log(chosenInfo)
     }
 
     loadAll();

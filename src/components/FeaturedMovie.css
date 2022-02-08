@@ -58,11 +58,10 @@
 
 .featured--buttons1,
 .featured--buttons2,
-.featured--buttons3,
-.featured--buttons4{
-    font-size: 20px;
+.featured--buttons3{
+    font-size: 30px;
     font-weight: bold;
-    padding: 12px 25px;
+    padding: 10px 15px;
     background-color: #fed305;
     color: #000;
     border-radius: 5px;
@@ -73,8 +72,7 @@
 }
 .featured--buttons1:hover,
 .featured--buttons2:hover,
-.featured--buttons3:hover,
-.featured--buttons4:hover {
+.featured--buttons3:hover{
     opacity: 0.7;
     color: #de0f3f;
 }

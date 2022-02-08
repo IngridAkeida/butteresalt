@@ -1,5 +1,12 @@
 import React from 'react';
 import './FeaturedMovie.css';
+import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
+//import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
+//import DeleteIcon from '@mui/icons-material/Delete';
+//import FavoriteIcon from '@mui/icons-material/Favorite';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+//import ReadMoreIcon from '@mui/icons-material/ReadMore';
+import BookIcon from '@mui/icons-material/Book';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default ({item}) => {
@@ -40,10 +47,10 @@ export default ({item}) => {
                     </div>
                     <div className='featured--description'>{description}</div>
                     <div className='featured--buttons'>
-                        <a href={`/watch/${item.id}`} className='featured--buttons1'> ▶ Trailer</a>
-                        <a href={`/list/add/${item.id}`} className='featured--buttons2'> + Adicionar a Lista</a>
-                        <a href={`/list/add/${item.id}`} className='featured--buttons3'> + Adicionar aos Favoritos</a>
-                        <a href={`/list/add/${item.id}`} className='featured--buttons4'> + Informacoes</a>
+                        
+                        <a href={`/list/add/${item.id}`} className='featured--buttons1'><PlaylistAddIcon/></a>
+                        <a href={`/list/add/${item.id}`} className='featured--buttons2'><FavoriteBorderIcon/></a>
+                        <a href={`/watch/${item.id}`} className='featured--buttons3'><BookIcon/></a>
                         
                     </div>
                     <div className='featured--genres'><strong>Gêneros: </strong>{ genres.join(', ')}</div>
