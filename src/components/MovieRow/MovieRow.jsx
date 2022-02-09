@@ -9,6 +9,7 @@ import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 //import ReadMoreIcon from '@mui/icons-material/ReadMore';
 import BookIcon from '@mui/icons-material/Book';
+//import AddIcon from '@mui/icons-material/Add';
 
 
 // eslint-disable-next-line import/no-anonymous-default-export
@@ -41,6 +42,7 @@ export default ({title, items, item}) => {
         genres.push( item.genres[i].name);
     }*/
 
+
     return (
         <div className='movieRow'>
 
@@ -59,24 +61,35 @@ export default ({title, items, item}) => {
                     marginLeft: scrollX,
                     width: items.results.length * 220
                 }}>
-                    {items.results.length > 0 && items.results.map((item, key)=>(                  
+                    {items.results.length > 0 && items.results.map((item, key)=> {
+
+                        let bigTitle = (item.title || item.name);
+                        let bigTitleStyles = {};
+                        if(bigTitle.length > 20){
+                            bigTitleStyles = {marginTop: '20px'};
+                        }
+                        
+                        return (                
                         <div key={key} className='movieRow--item'>
                             <img key={key} src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} alt={item.original_title}/>
-                                <div className='movierow--info'>
-                                    <div className='movieRow--data'>
-                                        <div className='movieRow--title'>{item.title || item.name}</div>
-                                        <div className='movieRow--point'>{item.vote_average} Pontos</div>
-                                        {/*<div className='movieRow--year'>{date.getFullYear()}</div>*/}
+                            <div className='movierow--info'>
+                                <div className='movieRow--data'>
+                                    <div className='movieRow--title' style={bigTitleStyles}>
+                                        <strong>{bigTitle}</strong>
                                     </div>
-                                    <div className='movierow--buttons'>              
+                                    <div className='movieRow--point'>{item.vote_average} Pontos</div>
+                                    {/*<div className='movieRow--year'>{date.getFullYear()}</div>*/}
+                                </div>
+                                <div className='movierow--buttons'>              
                                     <a href={`/`} className='movierow--buttons1' ><PlaylistAddIcon/></a>
                                     <a href={`/`} className='movierow--buttons2' ><FavoriteBorderIcon/></a>
                                     <a href={`/`} className='movierow--buttons3' ><BookIcon/></a>                    
-                                    </div>
-                                    {/*<div className='movierow--genres'><strong>Gêneros: </strong>{genres.join(', ')}</div>*/}
                                 </div>
+                                <div className='movierow--genres'><strong>Gêneros: Drama</strong>{/*{genres.join(', ')}*/}</div>
+                            </div>
                         </div>
-                    ))}
+                    )
+                    })}
                 </div>    
                 
             </div>

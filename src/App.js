@@ -1,15 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import tmdb from './Tmdb';
-import MovieRow from './components/MovieRow/MovieRow.jsx';
-import FeaturedMovie from './components/FeaturedMovie/FeaturedMovie.jsx';
 import Header from './components/Header/Header.jsx';
+import FeaturedMovie from './components/FeaturedMovie/FeaturedMovie.jsx';
+import MovieRow from './components/MovieRow/MovieRow.jsx';
+//import Login from
+//import Movie from
+//import TV from
+//import Actors from
+//import Directors from
+//import Favorites from
+//import List from
+//import More from
+//import Search from './Search';
+
 //import { BrowserRouter } from 'react-router-dom';
-{/*import Search from './Search';*/}
+
 
 {/*function App() {
   return(
-    <div>
+    <div classname="app">
       <Header/>
         <BrowserRouter>
           <Switch>
