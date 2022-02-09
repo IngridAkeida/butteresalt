@@ -41,8 +41,11 @@ export default ({yellow, color}) => {
                     </form>   
                 
                 <div className="header--user">
-                    <a href="/">
-                        <img src="image/user.png" alt="User"/>
+                    <a className={color ? 'color' : ''} href="/">
+                        <p><strong>Olá, faça login!</strong></p>
+                        <a href="/">
+                            <img src="image/user.png" alt="User"/>
+                        </a>
                     </a>
                 </div>
             </div>
@@ -74,12 +77,12 @@ export default ({yellow, color}) => {
                 <div className="header--personal">
                     <div className="header--favorite">
                         <a className={color ? 'color' : ''} href="/">
-                            <p>Favoritos</p>
+                            <p><FavoriteIcon style={{fontsize: 50}}/></p>
                         </a>
                     </div>
                     <div className="header--myList">
                         <a className={color ? 'color' : ''} href="/">
-                            <p>Minha Lista</p>
+                            <p><ReadMoreIcon style={{fontsize:50}}/></p>
                         </a>
                     </div>
                 </div>

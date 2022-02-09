@@ -25,7 +25,7 @@ export default ({title, items, item}) => {
     }
     const handleRightArrow = () => {
         let x = scrollX - Math.round(window.innerWidth/2);
-        let listW = items.results.length * 200;
+        let listW = items.results.length * 220;
 
         if((window.innerWidth - listW) > x){
             x = (window.innerWidth - listW) - 60;
@@ -35,6 +35,11 @@ export default ({title, items, item}) => {
     //let date = new Date (item.release_date)
     //console.log(item.release_date)
     //console.log(item)
+
+   /* let genres =[];
+    for (let i in item.genres){
+        genres.push( item.genres[i].name);
+    }*/
 
     return (
         <div className='movieRow'>
@@ -52,7 +57,7 @@ export default ({title, items, item}) => {
             <div className='movieRow--listarea'>
                 <div className='movieRow--list' style={{
                     marginLeft: scrollX,
-                    width: items.results.length * 200
+                    width: items.results.length * 220
                 }}>
                     {items.results.length > 0 && items.results.map((item, key)=>(                  
                         <div key={key} className='movieRow--item'>
@@ -67,7 +72,8 @@ export default ({title, items, item}) => {
                                     <a href={`/`} className='movierow--buttons1' ><PlaylistAddIcon/></a>
                                     <a href={`/`} className='movierow--buttons2' ><FavoriteBorderIcon/></a>
                                     <a href={`/`} className='movierow--buttons3' ><BookIcon/></a>                    
-                                    </div> 
+                                    </div>
+                                    {/*<div className='movierow--genres'><strong>Gêneros: </strong>{genres.join(', ')}</div>*/}
                                 </div>
                         </div>
                     ))}
