@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import tmdb from './Tmdb';
-import MovieRow from './components/MovieRow';
-import FeaturedMovie from './components/FeaturedMovie';
-import Header from './components/Header';
+import MovieRow from './components/MovieRow/MovieRow.jsx';
+import FeaturedMovie from './components/FeaturedMovie/FeaturedMovie.jsx';
+import Header from './components/Header/Header.jsx';
 //import { BrowserRouter } from 'react-router-dom';
 {/*import Search from './Search';*/}
 
