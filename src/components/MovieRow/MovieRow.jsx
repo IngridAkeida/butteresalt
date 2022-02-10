@@ -26,22 +26,13 @@ export default ({title, items, item}) => {
     }
     const handleRightArrow = () => {
         let x = scrollX - Math.round(window.innerWidth/2);
-        let listW = items.results.length * 220;
+        let listW = items.results.length * 230;
 
         if((window.innerWidth - listW) > x){
             x = (window.innerWidth - listW) - 60;
         }
         setScrollX(x);
     }
-    //let date = new Date (item.release_date)
-    //console.log(item.release_date)
-    //console.log(item)
-
-   /* let genres =[];
-    for (let i in item.genres){
-        genres.push( item.genres[i].name);
-    }*/
-
 
     return (
         <div className='movieRow'>
@@ -49,43 +40,53 @@ export default ({title, items, item}) => {
             <h2>{title}</h2>
 
             <div className='movieRow--left' onClick={handleLeftArrow}>
-                <ArrowLeftIcon style={{fontsize:50}}/>
+                <ArrowLeftIcon style={{fontSize:80}}/>
             </div>
 
             <div className='movieRow--right' onClick={handleRightArrow}>
-                <ArrowRight style={{fontsize:50}}/>
+                <ArrowRight style={{fontSize:80}}/>
             </div>
 
             <div className='movieRow--listarea'>
                 <div className='movieRow--list' style={{
                     marginLeft: scrollX,
-                    width: items.results.length * 220
+                    width: items.results.length * 230
                 }}>
                     {items.results.length > 0 && items.results.map((item, key)=> {
 
                         let bigTitle = (item.title || item.name);
                         let bigTitleStyles = {};
-                        if(bigTitle.length > 20){
-                            bigTitleStyles = {marginTop: '20px'};
+                        if(bigTitle.length > 25){
+                            bigTitleStyles = {marginTop: '0'};
                         }
+
+                        let firstDate = (item.first_air_date || item.release_date);
+                        let date = new Date (firstDate);
+
+                        let genres2 =[];
+                        for (let i in item.genres){
+                            genres2.push( item.genres[i].name);
+                        }
+                        console.log(items)
+
                         
                         return (                
                         <div key={key} className='movieRow--item'>
-                            <img key={key} src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} alt={item.original_title}/>
-                            <div className='movierow--info'>
+                            <img key={key} src={`https://image.tmdb.org/t/p/original${item.poster_path}`} alt={bigTitle}/>
+                            <div className='movieRow--info'>
                                 <div className='movieRow--data'>
-                                    <div className='movieRow--title' style={bigTitleStyles}>
-                                        <strong>{bigTitle}</strong>
+                                    <div className='movieRow--title'>
+                                        {bigTitle}
                                     </div>
                                     <div className='movieRow--point'>{item.vote_average} Pontos</div>
-                                    {/*<div className='movieRow--year'>{date.getFullYear()}</div>*/}
+                                    <div className='movieRow--year'>{date.getFullYear()}</div>
                                 </div>
-                                <div className='movierow--buttons'>              
-                                    <a href={`/`} className='movierow--buttons1' ><PlaylistAddIcon/></a>
-                                    <a href={`/`} className='movierow--buttons2' ><FavoriteBorderIcon/></a>
-                                    <a href={`/`} className='movierow--buttons3' ><BookIcon/></a>                    
+                                <div className='movieRow--buttons' style={bigTitleStyles}>              
+                                    <a href={`/`} className='movieRow--buttons1' ><PlaylistAddIcon/></a>
+                                    <a href={`/`} className='movieRow--buttons2' ><FavoriteBorderIcon/></a>
+                                    <a href={`/`} className='movieRow--buttons3' ><BookIcon/></a>                    
                                 </div>
-                                <div className='movierow--genres'><strong>Gêneros: Drama</strong>{/*{genres.join(', ')}*/}</div>
+                                <div className='movieRow--genres'>Gêneros: {genres2.join(', ')}</div>
                             </div>
                         </div>
                     )

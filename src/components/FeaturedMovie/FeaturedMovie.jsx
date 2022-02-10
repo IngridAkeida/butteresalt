@@ -18,6 +18,7 @@ export default ({item}) => {
     for (let i in item.genres){
         genres.push( item.genres[i].name);
     }
+    //console.log(item);
 
     //Para limitar a quantidade de caracteres da descricao do título
     let description = item.overview;

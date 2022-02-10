@@ -27,7 +27,7 @@ export default {
         return [
             {
                 slug: 'originals',
-                title: 'Original da Netflix',
+                title: 'Disponíveis na Netflix',
                 items: await basicFetch (`/discover/tv?with_network=213&language=pt-BR&api_key=${API_KEY}`)
             },
             {
@@ -66,8 +66,8 @@ export default {
                 items: await basicFetch (`/discover/movie?with_genres=99&language=pt-BR&api_key=${API_KEY}`)
             },
             {
-                slug: 'company',
-                title: 'Streams',
+                slug: 'marvel',
+                title: 'Originais Marvel',
                 items: await basicFetch (`/discover/movie?api_key=${API_KEY}&language=en-US&sort_by=primary_release_date.desc&page=1&with_companies=420|19551|38679|2301|13252`)
             },
         ];
