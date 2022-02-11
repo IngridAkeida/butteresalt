@@ -1,43 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import tmdb from './Tmdb';
-import Header from './components/Header/Header.jsx';
-import FeaturedMovie from './components/FeaturedMovie/FeaturedMovie.jsx';
-import MovieRow from './components/MovieRow/MovieRow.jsx';
+
+import Header from './components/Header/Header';
+import FeaturedMovie from './components/FeaturedMovie/FeaturedMovie';
+import MovieRow from './components/MovieRow/MovieRow';
+
+
+
 //import Login from
-//import Movie from
-//import TV from
-//import Actors from
-//import Directors from
-//import Favorites from
-//import List from
 //import More from
 //import Search from './Search';
 
-//import { BrowserRouter } from 'react-router-dom';
-
-
-{/*function App() {
-  return(
-    <div classname="app">
-      <Header/>
-        <BrowserRouter>
-          <Switch>
-            <Route exact path="/" component={Lancamentos}/>
-            <Route exact="/lancamentos" component={Lancamentos}/>
-            <Route exact="/sobre" component={Sobre}/>
-            <Route exact="/busca" component={Busca}/>
-          </Switch>
-        </BrowserRouter>
-    </div>
-
-  );
-}*/}
-
-
-
-// eslint-disable-next-line import/no-anonymous-default-export
-export default () => {
+export default function App() {
 
   const [ movieList, setMovieList ] = useState([]);
   const [ featuredData, setFeaturedData ] = useState(null);
@@ -87,7 +62,7 @@ export default () => {
   }, []);
 
   return (
-
+  
     <div className='page'>
 
       <Header yellow={yellowHeader} color={colorHeader}/>

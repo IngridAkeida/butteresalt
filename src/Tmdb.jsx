@@ -31,6 +31,11 @@ export default {
                 items: await basicFetch (`/discover/tv?with_network=213&language=pt-BR&api_key=${API_KEY}`)
             },
             {
+                slug: 'amazon',
+                title: 'Disponíveis na Amazon',
+                items: await basicFetch (`/discover/tv?with_network=2739&language=pt-BR&api_key=${API_KEY}`)
+            },
+            {
                 slug: 'trending',
                 title: 'Recomendados para Você',
                 items: await basicFetch (`/trending/all/week?language=pt-BR&api_key=${API_KEY}`)

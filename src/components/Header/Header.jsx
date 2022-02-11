@@ -1,5 +1,8 @@
 import React, {useState} from "react";
 import './Header.css';
+import { Link } from "react-router-dom";
+
+
 import SearchIcon from '@mui/icons-material/Search';
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
@@ -28,6 +31,7 @@ export default ({yellow, color}) => {
                     <a href="/">
                         <img src="image/butteresaltyellow.png" alt="butteresaltyellow"/>
                     </a>
+
                 </div>
                     <form action="" className="header--ask">
                         <input 
@@ -53,42 +57,52 @@ export default ({yellow, color}) => {
             <div className="header--2">
                 <div className="header--options">
                     <div className="header--film">
-                        <a className={color ? 'color' : ''} href="/">
-                            <p>Filmes</p>
-                        </a>
+                        <nav>
+                            <Link to="Filmes" className={color ? 'color' : ''}>
+                               <p>Filmes</p>
+                            </Link>
+                        </nav>
                     </div>
                     <div className="header--tv">
-                        <a className={color ? 'color' : ''} href="/">
-                            <p>Séries</p>
-                        </a>
+                        <nav>
+                            <Link to="/Séries" className={color ? 'color' : ''}>
+                               <p>Séries</p>
+                            </Link>
+                        </nav>
                     </div>
                     <div className="header--actor">
-                        <a className={color ? 'color' : ''} href="/">
-                            <p>Atores</p>
-                        </a>
+                        <nav>
+                            <Link to="/Atores" className={color ? 'color' : ''}>
+                               <p>Atores</p>
+                            </Link>
+                        </nav>
                     </div>
                     <div className="header--director">
-                        <a className={color ? 'color' : ''} href="/">
-                            <p>Diretores</p>
-                        </a>
+                        <nav>
+                            <Link to="/Diretores" className={color ? 'color' : ''}>
+                               <p>Diretores</p>
+                            </Link>
+                        </nav>
                     </div>
                 </div>
 
                 <div className="header--personal">
                     <div className="header--favorite">
-                        <a className={color ? 'color' : ''} href="/">
-                            <p><FavoriteIcon style={{fontsize: 50}}/></p>
-                        </a>
+                        <nav>
+                            <Link to="/Favoritos" className={color ? 'color' : ''}>
+                               <p><FavoriteIcon style={{fontsize: 50}}/></p>
+                            </Link>
+                        </nav>
                     </div>
                     <div className="header--myList">
-                        <a className={color ? 'color' : ''} href="/">
-                            <p><ReadMoreIcon style={{fontsize:50}}/></p>
-                        </a>
+                        <nav>
+                            <Link to="/MinhaLista" className={color ? 'color' : ''}>
+                               <p><ReadMoreIcon style={{fontsize:50}}/></p>
+                            </Link>
+                        </nav>
                     </div>
                 </div>
             </div>      
         </header>        
     );
 }
-
-
