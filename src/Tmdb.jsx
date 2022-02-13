@@ -101,5 +101,30 @@ export default {
         }
 
         return info;
+    },
+
+    getMovieCredts: async (movieId, type) => {
+        let credits = {};
+
+        if(movieId) {
+            // eslint-disable-next-line default-case
+            switch(type) {
+                case 'movie':
+                    credits = await basicFetch(`/movie/${movieId}/credits?language=pt-BR&api_key=${API_KEY}`);
+                
+                break;
+
+                case 'tv':
+                    credits = await basicFetch(`/tv/${movieId}/credits?language=pt-BR&api_key=${API_KEY}`);
+
+                break;
+
+                default:
+                    credits = null;
+                break;
+            }
+
+        }
+        return credits;
     }
 }

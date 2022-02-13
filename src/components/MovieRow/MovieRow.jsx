@@ -67,7 +67,7 @@ export default ({title, items, item}) => {
                         for (let i in item.genres){
                             genres2.push( item.genres[i].name);
                         }
-                        console.log(items)
+                        {/*console.log(items)*/}
 
                         
                         return (                
