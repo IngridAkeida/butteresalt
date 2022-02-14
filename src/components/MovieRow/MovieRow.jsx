@@ -62,12 +62,14 @@ export default ({title, items, item}) => {
 
                         let firstDate = (item.first_air_date || item.release_date);
                         let date = new Date (firstDate);
+                        let year = date.getFullYear();
 
                         let genres2 =[];
                         for (let i in item.genres){
                             genres2.push( item.genres[i].name);
                         }
-                        {/*console.log(items)*/}
+
+                        let points = item.vote_average;
 
                         
                         return (                
@@ -77,9 +79,15 @@ export default ({title, items, item}) => {
                                 <div className='movieRow--data'>
                                     <div className='movieRow--title'>
                                         {bigTitle}
-                                    </div>
-                                    <div className='movieRow--point'>{item.vote_average} Pontos</div>
-                                    <div className='movieRow--year'>{date.getFullYear()}</div>
+                                    </div>              
+                                    {
+                                        points > 0 ? (
+                                            <div className='movieRow--point'>{points} Ponto
+                                                {points > 1 ? 's' : ''}
+                                            </div>
+                                        ) : null
+                                    }  
+                                    <div className='movieRow--year'>{year}</div>
                                 </div>
                                 <div className='movieRow--buttons' style={bigTitleStyles}>              
                                     <a href={`/`} className='movieRow--buttons1' ><PlaylistAddIcon/></a>

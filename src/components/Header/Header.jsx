@@ -31,26 +31,24 @@ export default ({yellow, color}) => {
                     <a href="/">
                         <img src="image/butteresaltyellow.png" alt="butteresaltyellow"/>
                     </a>
-
                 </div>
-                    <form action="" className="header--ask">
-                        <input 
-                            className="header--form" 
-                            type="text" 
-                            name="search" 
-                            id="search" 
-                            onChange={(e)=> setSearch(e.target.value)}
-                        />
-                        <button type="submit" className="searchcss"><SearchIcon/></button>
-                    </form>   
+
+                <form action="" className="header--ask">
+                    <input 
+                        className="header--form" 
+                        type="text" 
+                        name="search" 
+                        id="search" 
+                        onChange={(e)=> setSearch(e.target.value)}
+                    />
+                    <button type="submit" className="searchcss"><SearchIcon/></button>
+                </form>   
                 
                 <div className="header--user">
-                    <a className={color ? 'color' : ''}> 
-                        <p><strong>Olá, faça login!</strong></p>
-                        <a href="/">
-                            <img src="image/user.png" alt="User"/>
-                        </a>
-                    </a>
+                    <Link to="Filmes" className={color ? 'color merda' : 'merda'}>
+                        <img src="image/user.png" alt="User"/>
+                        <span>Olá, faça login!</span>
+                    </Link>
                 </div>
             </div>
             

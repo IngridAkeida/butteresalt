@@ -7,6 +7,7 @@ import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 //import ReadMoreIcon from '@mui/icons-material/ReadMore';
 import BookIcon from '@mui/icons-material/Book';
+//import { ConstructionRounded } from '@mui/icons-material';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default ({item}) => {
@@ -16,7 +17,7 @@ export default ({item}) => {
     //Para pegar o gênero do título 
     let genres =[];
     for (let i in item.genres){
-        genres.push( item.genres[i].name);
+        genres.push(item.genres[i].name);
     }
     //console.log(item);
 
@@ -25,6 +26,8 @@ export default ({item}) => {
     if(description.length > 250){
         description = description.substring(0 , 250) + '...';
     }
+
+    //Botões
     
     return (
         <section className='featured' style={{
@@ -48,11 +51,9 @@ export default ({item}) => {
                     </div>
                     <div className='featured--description'>{description}</div>
                     <div className='featured--buttons'>
-                        
                         <a href={`/list/add/${item.id}`} className='featured--buttons1'><PlaylistAddIcon/></a>
                         <a href={`/list/add/${item.id}`} className='featured--buttons2'><FavoriteBorderIcon/></a>
-                        <a href={`/watch/${item.id}`} className='featured--buttons3'><BookIcon/></a>
-                        
+                        <a href={`/watch/${item.id}`} className='featured--buttons3'><BookIcon/></a>   
                     </div>
                     <div className='featured--genres'><strong>Gêneros: </strong>{ genres.join(', ')}</div>
 

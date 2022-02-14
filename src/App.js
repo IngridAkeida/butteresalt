@@ -6,8 +6,6 @@ import Header from './components/Header/Header';
 import FeaturedMovie from './components/FeaturedMovie/FeaturedMovie';
 import MovieRow from './components/MovieRow/MovieRow';
 
-
-
 //import Login from
 //import More from
 //import Search from './Search';

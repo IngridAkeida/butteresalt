@@ -40,7 +40,7 @@ header.yellow{
     width: 400px;
     border: 0;
     border-radius: 15px 0 0 15px;
-    padding: 15px 0;
+    padding: 15px;
     font-size: 16px;
 }
 .searchcss{
@@ -66,29 +66,22 @@ button{
     opacity: 0.7;
     color: #de0f3f;
 }
-.header--user{
-    margin-top: 50px;
-    height: 120px;
-    padding-top: 15px;
-    align-items: center;
-    display: inline-block;
-}
 
-.header--user p{
-    display: inline-block;
-    top: -50px;
-    position: relative;
-    font-size: 16px;
-    margin-right: 10px;
+.header--user{
+    height: 100%;
 }
 
 .header--user img{
-    height: 80%; 
-    border-radius: 10px;
-    display: inline-block;
-    background-color: hsl(346, 87%, 46%, 0.2);
-    padding: 5px;
-    margin: 5px;
+    height: 100%; 
+    background-color: blue;
+    margin-top: 10px;
+    vertical-align: middle;
+}
+
+.header--user span{
+    font-size: 20px;
+    margin-top: 10px;
+    background-color: aqua;
 }
 
 .header--2{
@@ -143,3 +136,56 @@ a:hover{
     font-weight: bold;
 }
 
+@media (max-width:760px) {
+    .header--1{
+        padding: 0 30px;
+    }
+    .header--logo{
+        height: 30px;
+    }
+    .header--form{
+        height: 20px;
+        width: 300px;
+    }
+    .header--user{    
+        margin-top: 40px;
+        padding-top: 10px;
+        width: 100px;
+        height: 70px;
+    }
+    .header--user p{
+        margin-top: -5px;
+        margin-left: 60px;
+        font-size: 14px;
+        display: inline-block;    
+    }
+    .header--user img{
+        margin-top: 5px;
+        height: 50px;
+        display: inline-block;  
+    }
+    .header--2{
+        display: flex;
+        height: 30px;
+        justify-content: space-between;    
+    }
+    .header--options{
+        margin-left: -30px;
+        padding: 0;
+    }
+
+    .header--film,
+    .header--tv,
+    .header--actor,
+    .header--director{
+        margin: 0 10px;
+        padding: 0 10px;
+    }
+    
+    .header--personal{
+        margin-right: -30px;
+        padding: 0;
+    }
+    
+
+}
