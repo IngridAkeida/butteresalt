@@ -37,7 +37,7 @@ header.yellow{
 }
 .header--form{
     height: 20px;
-    width: 400px;
+    width: 500px;
     border: 0;
     border-radius: 15px 0 0 15px;
     padding: 15px;
@@ -73,7 +73,6 @@ button{
 
 .header--user img{
     height: 100%; 
-    background-color: blue;
     margin-top: 10px;
     vertical-align: middle;
 }
@@ -81,7 +80,6 @@ button{
 .header--user span{
     font-size: 20px;
     margin-top: 10px;
-    background-color: aqua;
 }
 
 .header--2{
@@ -101,7 +99,7 @@ button{
 }
 
 .header--personal{
-    padding: 0 250px;
+    padding: 0 0 0 550px;
 }
 
 .header--film,
@@ -110,7 +108,7 @@ button{
 .header--director{
     margin: 0 20px;
     padding: 0 30px;
-    font-size: 16px;
+    font-size: 20px;
     align-items: center;
 }
 
@@ -148,8 +146,7 @@ a:hover{
         width: 300px;
     }
     .header--user{    
-        margin-top: 40px;
-        padding-top: 10px;
+        margin-top: 25px;
         width: 100px;
         height: 70px;
     }
@@ -170,7 +167,7 @@ a:hover{
         justify-content: space-between;    
     }
     .header--options{
-        margin-left: -30px;
+        margin-left: -45px;
         padding: 0;
     }
 
@@ -183,8 +180,8 @@ a:hover{
     }
     
     .header--personal{
-        margin-right: -30px;
-        padding: 0;
+        margin-right: 120px;
+        padding: 0 0 0 10px;
     }
     
 
