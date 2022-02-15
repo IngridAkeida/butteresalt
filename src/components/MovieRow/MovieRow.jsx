@@ -3,9 +3,9 @@ import './MovieRow.css'
 import ArrowRight from '@mui/icons-material/ArrowRight';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
-//import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
+import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
 //import DeleteIcon from '@mui/icons-material/Delete';
-//import FavoriteIcon from '@mui/icons-material/Favorite';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 //import ReadMoreIcon from '@mui/icons-material/ReadMore';
 import BookIcon from '@mui/icons-material/Book';
@@ -71,7 +71,18 @@ export default ({title, items, item}) => {
 
                         let points = item.vote_average;
 
-                        
+                        //Botões
+                        const [add, setAdd] = useState(false);
+                        const [fav, setFav] = useState(false);
+
+                        //Funcoes 
+                        const addOnClick = () =>{
+                            setAdd(!add)
+                        }
+                        const favOnClick = () =>{
+                            setFav(!fav)
+                        }
+                       
                         return (                
                         <div key={key} className='movieRow--item'>
                             <img key={key} src={`https://image.tmdb.org/t/p/original${item.poster_path}`} alt={bigTitle}/>
@@ -90,9 +101,25 @@ export default ({title, items, item}) => {
                                     <div className='movieRow--year'>{year}</div>
                                 </div>
                                 <div className='movieRow--buttons' style={bigTitleStyles}>              
-                                    <a href={`/`} className='movieRow--buttons1' ><PlaylistAddIcon/></a>
-                                    <a href={`/`} className='movieRow--buttons2' ><FavoriteBorderIcon/></a>
-                                    <a href={`/`} className='movieRow--buttons3' ><BookIcon/></a>                    
+                                    <button onClick={addOnClick} href={`/`} className='movieRow--buttons1' >
+                                        {
+                                            add === true ? (
+                                                <PlaylistAddCheckIcon/>
+                                            ) : (
+                                                <PlaylistAddIcon/>
+                                            )
+                                        }                                        
+                                    </button>
+                                    <button onClick={favOnClick} href={`/`} className='movieRow--buttons2' >
+                                        {
+                                            fav === true ? (
+                                                <FavoriteIcon/>
+                                            ) : (
+                                                <FavoriteBorderIcon/>
+                                            )
+                                        } 
+                                    </button>
+                                    <button href={`/`} className='movieRow--buttons3' ><BookIcon/></button>                    
                                 </div>
                                 <div className='movieRow--genres'>Gêneros: {genres2.join(', ')}</div>
                             </div>

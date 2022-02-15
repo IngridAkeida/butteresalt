@@ -1,16 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './FeaturedMovie.css';
+
+
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
-//import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
-//import DeleteIcon from '@mui/icons-material/Delete';
-//import FavoriteIcon from '@mui/icons-material/Favorite';
+import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-//import ReadMoreIcon from '@mui/icons-material/ReadMore';
 import BookIcon from '@mui/icons-material/Book';
-//import { ConstructionRounded } from '@mui/icons-material';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default ({item}) => {
+
+    
+
     // Para pegar o ano do titilo
     let releaseDate = new Date (item.release_date);
 
@@ -28,6 +30,16 @@ export default ({item}) => {
     }
 
     //Botões
+    const [add, setAdd] = useState(false);
+    const [fav, setFav] = useState(false);
+
+    //Funcoes 
+    const addOnClick = () =>{
+        setAdd(!add)
+    }
+    const favOnClick = () =>{
+        setFav(!fav)
+    }
     
     return (
         <section className='featured' style={{
@@ -51,13 +63,30 @@ export default ({item}) => {
                     </div>
                     <div className='featured--description'>{description}</div>
                     <div className='featured--buttons'>
-                        <a href={`/list/add/${item.id}`} className='featured--buttons1'><PlaylistAddIcon/></a>
-                        <a href={`/list/add/${item.id}`} className='featured--buttons2'><FavoriteBorderIcon/></a>
-                        <a href={`/watch/${item.id}`} className='featured--buttons3'><BookIcon/></a>   
+
+                        <button onClick={addOnClick} href={`/list/add/${item.id}`} className='featured--buttons1'>
+                            {
+                                add === true ? (
+                                    <PlaylistAddCheckIcon/>
+                                ) : (
+                                    <PlaylistAddIcon/>
+                                )
+                            }                      
+                        </button>
+                        
+                        <button onClick={favOnClick} href={`/list/add/${item.id}`} className='featured--buttons2'>
+                            {
+                                fav === true ? (
+                                    <FavoriteIcon/>
+                                ) : (
+                                    <FavoriteBorderIcon/>
+                                )
+                            } 
+                        </button>
+                        
+                        <button href={`/watch/${item.id}`} className='featured--buttons3'><BookIcon/></button>   
                     </div>
                     <div className='featured--genres'><strong>Gêneros: </strong>{ genres.join(', ')}</div>
-
-
                 </div>       
             </div>
         </section>
