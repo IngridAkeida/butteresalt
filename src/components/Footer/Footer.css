@@ -1,12 +1,33 @@
-footer{
-    background-color: azure;
+.footer{
+    background-color: #1f200e;
+    height: 300px;
+
+}
+.footer-Flex{
+    display: flex;
+    margin-left: 30px;
+    margin-right: 30px;
+    justify-content: space-between;
+}
+
+.footer--Contact,
+.footer--Map,
+.footer--Information{
+    
+    
+}
+.facebook,
+.instagram,
+.whatsapp,
+.pinterest,
+.twitter,
+.linkedin{
+    
 }
 
 
-
-
-
-.foo{
+.footer--Footer{
     margin: 50px 0px;
     text-align: center;
+    padding-bottom: 20px;
 }
