@@ -74,12 +74,7 @@ export default function App() {
           <MovieRow key={key} title={item.title} items={item.items}/>
         ))}
       </section>
-      <footer>
-        Feito com ódio no <span role="img" aria-label='Heart'>❤</span> por mim (brincadeirinha) <a href='https://ingrid-akeida.netlify.app/' target='blank' className='link'>Ingrid Sanches</a><br/>
-        Projeto de estudo sem fins lucrativos<br/>
-        Dados obtidos no site <a href='https://www.themoviedb.org/' target='blank' className='link'>TMDB</a> 
 
-      </footer>
         {/*<Search/>*/}
 
       {movieList <= 0 &&

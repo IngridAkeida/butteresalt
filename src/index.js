@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 import Home from './Pages/Homepageajustar/Home';
 import Sobre from './Pages/Sobre/Sobre';
@@ -38,6 +39,7 @@ ReactDOM.render(
             <Route path="maisinformacoes" element={<MaisInformacoes/>}/>
             <Route path="Login" element={<Login/>}/>         
         </Routes>
+        <Footer/>
   </BrowserRouter>
   </>,
 

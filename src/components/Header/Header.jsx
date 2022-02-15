@@ -45,7 +45,7 @@ export default ({yellow, color}) => {
                 </form>   
                 
                 <div className="header--user">
-                    <Link to="Filmes" className={color ? 'color merda' : 'merda'}>
+                    <Link to="Filmes" className={color ? 'color' : ''}>
                         <img src="image/user.png" alt="User"/>
                         <span>Olá, faça login!</span>
                     </Link>

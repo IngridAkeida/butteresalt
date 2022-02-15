@@ -26,16 +26,6 @@ export default {
     getHomeList: async () => {
         return [
             {
-                slug: 'originals',
-                title: 'Disponíveis na Netflix',
-                items: await basicFetch (`/discover/tv?with_network=213&language=pt-BR&api_key=${API_KEY}`)
-            },
-            {
-                slug: 'amazon',
-                title: 'Disponíveis na Amazon',
-                items: await basicFetch (`/discover/tv?with_network=2739&language=pt-BR&api_key=${API_KEY}`)
-            },
-            {
                 slug: 'trending',
                 title: 'Recomendados para Você',
                 items: await basicFetch (`/trending/all/week?language=pt-BR&api_key=${API_KEY}`)
@@ -44,36 +34,6 @@ export default {
                 slug: 'toprated',
                 title: 'Em Alta',
                 items: await basicFetch (`/movie/top_rated?language=pt-BR&api_key=${API_KEY}`)
-            },
-            {
-                slug: 'action',
-                title: 'Ação',
-                items: await basicFetch (`/discover/movie?with_genres=28&language=pt-BR&api_key=${API_KEY}`)
-            },
-            {
-                slug: 'comedy',
-                title: 'Comédia',
-                items: await basicFetch (`/discover/movie?with_genres=35&language=pt-BR&api_key=${API_KEY}`)
-            },
-            {
-                slug: 'horror',
-                title: 'Terror',
-                items: await basicFetch (`/discover/movie?with_genres=27&language=pt-BR&api_key=${API_KEY}`)
-            },
-            {
-                slug: 'romance',
-                title: 'Romance',
-                items: await basicFetch (`/discover/movie?with_genres=10749&language=pt-BR&api_key=${API_KEY}`)
-            },
-            {
-                slug: 'documentary',
-                title: 'Documentário',
-                items: await basicFetch (`/discover/movie?with_genres=99&language=pt-BR&api_key=${API_KEY}`)
-            },
-            {
-                slug: 'marvel',
-                title: 'Originais Marvel',
-                items: await basicFetch (`/discover/movie?api_key=${API_KEY}&language=en-US&sort_by=primary_release_date.desc&page=1&with_companies=420|19551|38679|2301|13252`)
             },
         ];
     },
