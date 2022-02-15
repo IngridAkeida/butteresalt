@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import './MovieRow.css'
+
+
 import ArrowRight from '@mui/icons-material/ArrowRight';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
-//import DeleteIcon from '@mui/icons-material/Delete';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-//import ReadMoreIcon from '@mui/icons-material/ReadMore';
 import BookIcon from '@mui/icons-material/Book';
-//import AddIcon from '@mui/icons-material/Add';
 
 
 // eslint-disable-next-line import/no-anonymous-default-export
