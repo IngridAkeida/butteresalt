@@ -1,7 +1,5 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './Sobre.css';
-import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
-import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
 
 export default function Sobre () {
     
