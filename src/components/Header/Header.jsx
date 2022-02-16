@@ -54,7 +54,7 @@ export default ({yellow, color}) => {
                 <div className="header--home">
                     <div className= "header--homePage">
                         <nav>
-                            <Link to="/Sobre" className={color ? 'color' : ''}>
+                            <Link to="/" className={color ? 'color' : ''}>
                                 <p>Home</p>
                             </Link>
                         </nav>
