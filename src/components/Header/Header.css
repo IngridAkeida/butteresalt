@@ -84,16 +84,30 @@ button{
 }
 
 .header--2{
-    padding: 0 180px 0 160px;
+    padding: 0 190px 0 190px;
     display: flex;
     height: 50px;
     justify-content: space-between;
 }
 
+.header--home,
 .header--options,
 .header--personal{
     display: flex;
     align-items: center;
+}
+
+.header--options{
+    margin-right: 190px;
+}
+
+.header--homePage,
+.header--about,
+.header--help{
+    margin: 0 20px;
+    font-size: 20px;
+    align-items: center;
+    display: flex;
 }
 
 .header--film,
@@ -109,13 +123,6 @@ button{
 .header--favorite,
 .header--myList{
     margin: 0 10px;
-}
-
-.header--about{
-    margin: 0 20px;
-    font-size: 20px;
-    align-items: center;
-    display: flex;
 }
 
 a{

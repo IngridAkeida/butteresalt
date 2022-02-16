@@ -23,6 +23,7 @@ export default ({yellow, color}) => {
         <header className={yellow ? 'yellow' : ''}>
 
             <div className="header--1">
+
                 <div className="header--logo">
                     <a href="/">
                         <img src="image/butteresaltyellow.png" alt="butteresaltyellow"/>
@@ -49,8 +50,9 @@ export default ({yellow, color}) => {
             </div>
             
             <div className="header--2">
-                <div className="header--options">
-                    <div className= "header--about">
+
+                <div className="header--home">
+                    <div className= "header--homePage">
                         <nav>
                             <Link to="/Sobre" className={color ? 'color' : ''}>
                                 <p>Home</p>
@@ -64,7 +66,7 @@ export default ({yellow, color}) => {
                             </Link>
                         </nav>
                     </div>
-                    <div className= "header--about">
+                    <div className= "header--help">
                         <nav>
                             <Link to="/Sobre" className={color ? 'color' : ''}>
                                 <p>Ajuda</p>
