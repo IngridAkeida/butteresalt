@@ -84,23 +84,16 @@ button{
 }
 
 .header--2{
-    padding: 0 60px;
+    padding: 0 180px 0 160px;
     display: flex;
     height: 50px;
+    justify-content: space-between;
 }
 
 .header--options,
 .header--personal{
     display: flex;
     align-items: center;
-}
-
-.header--options{
-    padding:0 100px;
-}
-
-.header--personal{
-    padding: 0 0 0 550px;
 }
 
 .header--film,
@@ -116,7 +109,13 @@ button{
 .header--favorite,
 .header--myList{
     margin: 0 10px;
+}
 
+.header--about{
+    margin: 0 20px;
+    font-size: 20px;
+    align-items: center;
+    display: flex;
 }
 
 a{

@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './FeaturedMovie.css';
+import { Link } from "react-router-dom";
 
 
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
@@ -84,7 +85,10 @@ export default ({item}) => {
                             } 
                         </button>
                         
-                        <button href={`/watch/${item.id}`} className='featured--buttons3'><BookIcon/></button>   
+                        <button href={`/watch/${item.id}`} className='featured--buttons3'><BookIcon/></button>
+                        <Link to="Filmes" className='featured--buttons3'>
+                            <BookIcon/>
+                        </Link>   
                     </div>
                     <div className='featured--genres'><strong>Gêneros: </strong>{ genres.join(', ')}</div>
                 </div>       

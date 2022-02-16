@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './MovieRow.css'
+import { Link } from "react-router-dom";
 
 
 import ArrowRight from '@mui/icons-material/ArrowRight';
@@ -118,7 +119,10 @@ export default ({title, items, item}) => {
                                             )
                                         } 
                                     </button>
-                                    <button href={`/`} className='movieRow--buttons3' ><BookIcon/></button>                    
+                                    <Link to="Filmes" className='movieRow--buttons3'>
+                                        <BookIcon/>
+                                    </Link>
+
                                 </div>
                                 <div className='movieRow--genres'>Gêneros: {genres2.join(', ')}</div>
                             </div>

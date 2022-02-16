@@ -54,6 +54,29 @@ export default ({yellow, color}) => {
             
             <div className="header--2">
                 <div className="header--options">
+                    <div className= "header--about">
+                        <nav>
+                            <Link to="/Sobre" className={color ? 'color' : ''}>
+                                <p>Home</p>
+                            </Link>
+                        </nav>
+                    </div>
+                    <div className= "header--about">
+                        <nav>
+                            <Link to="/Sobre" className={color ? 'color' : ''}>
+                                <p>Sobre nós</p>
+                            </Link>
+                        </nav>
+                    </div>
+                    <div className= "header--about">
+                        <nav>
+                            <Link to="/Sobre" className={color ? 'color' : ''}>
+                                <p>Ajuda</p>
+                            </Link>
+                        </nav>
+                    </div>
+                </div>
+                <div className="header--options">
                     <div className="header--film">
                         <nav>
                             <Link to="Filmes" className={color ? 'color' : ''}>
@@ -100,6 +123,7 @@ export default ({yellow, color}) => {
                         </nav>
                     </div>
                 </div>
+                
             </div>      
         </header>        
     );
