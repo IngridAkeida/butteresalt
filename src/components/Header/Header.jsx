@@ -2,8 +2,10 @@ import React, {useState} from "react";
 import './Header.css';
 import { Link } from "react-router-dom";
 
+import Button from '../Button/Button';
 
-import SearchIcon from '@mui/icons-material/Search';
+
+
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ReadMoreIcon from '@mui/icons-material/ReadMore';
 
@@ -40,7 +42,7 @@ export default ({yellow, color}) => {
                         id="search" 
                         onChange={(e)=> setSearch(e.target.value)}
                     />
-                    <button type="submit" className="searchcss"><SearchIcon/></button>
+                    <Button/> 
                 </form>   
                 
                 <div className="header--user">
