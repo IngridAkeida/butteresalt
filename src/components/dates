@@ -1,15 +1,15 @@
-import ArrowRight from '@mui/icons-material/ArrowRight';
-import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
-import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
+//import ArrowRight from '@mui/icons-material/ArrowRight';
+//import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
+//import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 //import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
 //import DeleteIcon from '@mui/icons-material/Delete';
 //import FavoriteIcon from '@mui/icons-material/Favorite';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+//import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 //import ReadMoreIcon from '@mui/icons-material/ReadMore';
-import BookIcon from '@mui/icons-material/Book';
+//import BookIcon from '@mui/icons-material/Book';
 //import AddIcon from '@mui/icons-material/Add';
 
-{
+/*{
     slug: 'documentary',
     title: 'Documentário',
     items: await basicFetch (`/discover/movie?with_genres=99&language=pt-BR&api_key=${API_KEY}`)
@@ -86,3 +86,5 @@ import BookIcon from '@mui/icons-material/Book';
                         <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
                         <button type="button" class="w3-button w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('newsletter').style.display='none'">Subscribe</button>
                     </div>
+
+                    */
