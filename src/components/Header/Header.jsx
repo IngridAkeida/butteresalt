@@ -7,13 +7,15 @@ import SearchIcon from '@mui/icons-material/Search';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ReadMoreIcon from '@mui/icons-material/ReadMore';
 
-{/*import {BrowserRouter, Route, Switch, Link} from 'react-router-dom'*/}
 
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default ({yellow, color}) => {
 
     const [search, setSearch] = useState("");
+
+    const name = 'Joe Doe'
+    const x = true
 
     /*function handleSearch(e){
         setSearch(e.target.value)
@@ -44,7 +46,7 @@ export default ({yellow, color}) => {
                 <div className="header--user">
                     <Link to="Filmes" className={color ? 'color' : ''}>
                         <img src="image/user.png" alt="User"/>
-                        <span>Olá, faça login!</span>
+                        <span>Olá, {x ? name : 'faça login!'}</span>
                     </Link>
                 </div>
             </div>
