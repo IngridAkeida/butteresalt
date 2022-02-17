@@ -1,7 +1,7 @@
 import React from 'react';
 import './Diretores.css';
 
-export default () => {
+export default function Diretores() {
     return(
         <div>
 
