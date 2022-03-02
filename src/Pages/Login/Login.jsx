@@ -4,6 +4,8 @@ import './Login.css';
 import PersonIcon from '@mui/icons-material/Person';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LockIcon from '@mui/icons-material/Lock';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import GoogleIcon from '@mui/icons-material/Google';
 
 export default function Login () {
     return(
@@ -28,19 +30,18 @@ export default function Login () {
                     </div>
                 </form>
                 <div>
-                    <div>Or Sing Up Using</div>
-                    <ul>
+                    <div>Or Sign Up Using</div>
+                    <ul className='login-signup'>
                         <li>
-                            <a href="/"></a>
-                        </li>
-                        <li>
-                            <a href="/"></a>
-                        </li>
-                        <li>
-                            <a href="/"></a>
+                            <a href="/"><GoogleIcon/></a>
                         </li>   
+                        <li>
+                            <a href="/"><FacebookIcon/></a>
+                        </li>
                     </ul>
-
+                </div>
+                <div>
+                    <a href="/">Sign Up</a>
                 </div>
             </div>
         </div>
