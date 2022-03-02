@@ -1,6 +1,10 @@
 import React from 'react';
 import './Login.css';
 
+import PersonIcon from '@mui/icons-material/Person';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import LockIcon from '@mui/icons-material/Lock';
+
 export default function Login () {
     return(
         <div>
