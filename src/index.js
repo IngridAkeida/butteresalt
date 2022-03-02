@@ -37,11 +37,11 @@ ReactDOM.render(
             <Route path="favoritos" element={<Favoritos/>}/>
             <Route path="minhalista" element={<MinhaLista/>}/>
             <Route path="maisinformacoes" element={<MaisInformacoes/>}/>
-            <Route path="Login" element={<Login/>}/>         
+            <Route path="Login" element={<Login/>}/>          
         </Routes>
         <Footer/>
-  </BrowserRouter>
-  </>,
+    </BrowserRouter>
+    </>,
 
 document.getElementById('root')
 );
