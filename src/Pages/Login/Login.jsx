@@ -29,19 +29,20 @@ export default function Login () {
                         <input className="submit" type="submit" value="Login"/>
                     </div>
                 </form>
-                <div>
+                <div className='login-others'>
                     <div>Or Sign Up Using</div>
                     <ul className='login-signup'>
                         <li>
-                            <a href="/"><GoogleIcon/></a>
+                            <a href="/"><GoogleIcon style={{fontSize:50}}/></a>
                         </li>   
                         <li>
-                            <a href="/"><FacebookIcon/></a>
+                            <a href="/"><FacebookIcon style={{fontSize:50}}/></a>
                         </li>
                     </ul>
-                </div>
-                <div>
-                    <a href="/">Sign Up</a>
+                    <div className='login-link'>
+                        <a href="/">Sign Up</a>
+                    </div>
+                    
                 </div>
             </div>
         </div>

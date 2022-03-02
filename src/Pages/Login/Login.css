@@ -9,7 +9,7 @@
 .container{
     width: 400px;
     height: 700px;
-    background-color: #ffffff4d;
+    background-color: #db7d00b3;
     border-radius: 10px;
     margin: 0 auto;
     margin-top: 120px;
@@ -23,12 +23,14 @@
     margin-top: -70px;
     margin-bottom: 10px;
     border-radius: 50%;
-    background-color: #db7d00;
+    background-color: #faa600;
     
 }
 
 .login-text{
-    font-size: 1.6em;      
+    font-size: 1.6em;
+    text-transform: uppercase;
+    color: #000;     
 }
 
 input{
@@ -73,15 +75,36 @@ input.submit:hover{
 
 label{
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     color: #000;
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: bold;
+}
+
+.login-others{
+    margin-top: 50px;
+    color: #000;
+    font-weight: bold;
+    font-size: 1em;
+    
 }
 .login-signup{
     list-style-type: none;
-    border: 1px solid red;
     display:flex;
-    align-items: center;  
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.login-signup a{
+    margin: 10px;
+    border: 1px solid red;
+}
+
+.login-link{
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    
 }
 
