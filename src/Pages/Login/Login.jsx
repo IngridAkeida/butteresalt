@@ -16,7 +16,7 @@ export default function Login () {
                 <form>
                     <div>
                         <label for="email">Username:</label>
-                        <input className="email" type="email" name="email" id="email" placeholder="Type your username"/>
+                        <input className="email" type="text" name="email" id="email" placeholder="Type your username"/>
                     </div>
                     <div>
                         <label for="email">Senha:</label>
