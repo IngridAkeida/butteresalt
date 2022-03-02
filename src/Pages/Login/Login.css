@@ -81,6 +81,14 @@ label{
     font-weight: bold;
 }
 
+.login-forgot{
+    font-size: 0.8em;
+    margin-bottom: 20px;
+    margin-top: -5px;
+    margin-left: 150px;
+    font-weight: bold;
+}
+
 .login-others{
     margin-top: 50px;
     color: #000;

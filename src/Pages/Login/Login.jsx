@@ -22,8 +22,8 @@ export default function Login () {
                         <label for="email">Senha:</label>
                         <input className="password" type="password" name="senha" id="senha" placeholder="Type your passaword"/>
                     </div>
-                    <div>
-                        <p><a href="/">Forgot your passaword?</a></p>
+                    <div className='login-forgot'>
+                        <a href="/">Forgot your passaword?</a>
                     </div>
                     <div>
                         <input className="submit" type="submit" value="Login"/>
