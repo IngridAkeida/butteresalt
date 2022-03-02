@@ -1,5 +1,6 @@
 .login{
-    border: 2px solid red;
+    padding-top: 50px;
+    padding-bottom: 50px;
     margin-top: 200px;
     background-image: url(../../../public/image/background.png);
 }
@@ -20,15 +21,20 @@
     width: 120px;
     height: 120px;
     margin-top: -70px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     border-radius: 50%;
     background-color: #db7d00;
+    
+}
+
+.login-text{
+    font-size: 1.6em;      
 }
 
 input{
     height: 40px;
     width: 80%;
-    font-size: 18px;
+    font-size: 0.8em;
     margin-bottom: 10px;
     background-color: #ffffff;
     border-radius: 5px;
@@ -52,17 +58,24 @@ input.submit{
     border: 2px solid #db7d00;
     padding: 5px 20px;
     height: 45px;
-    width: 90%;
+    width: 80%;
+    text-transform: uppercase;
+    font-weight: bold;
 
-    background: -webkit-linear-gradient(to bottom, #faa600, #f68a00);
-    background: -moz-linear-gradient(to bottom, #faa600, #f68a00);
-    background: -o-linear-gradient(to bottom, #faa600, #f68a00);    
-    background: linear-gradient(to bottom, #faa600, #f68a00);
+    background: -webkit-linear-gradient(to right, #faa600, #f68a00, #faa600);
+    background: -moz-linear-gradient(to right, #faa600, #f68a00, #faa600);
+    background: -o-linear-gradient(to right, #faa600, #f68a00, #faa600);  
+    background: linear-gradient(to right, #faa600, #f68a00, #faa600);
+}
+input.submit:hover{
+    background: #f79300;
 }
 
 label{
     display: block;
     margin-bottom: 5px;
-    color: #ffffff;
+    color: #000;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
