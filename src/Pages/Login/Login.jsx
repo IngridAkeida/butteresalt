@@ -23,7 +23,7 @@ export default function Login () {
                         <input className="password" type="password" name="senha" id="senha" placeholder="Type your passaword"/>
                     </div>
                     <div className='login-forgot'>
-                        <a href="/">Forgot your passaword?</a>
+                        <a href="/">Forgot your password?</a>
                     </div>
                     <div>
                         <input className="submit" type="submit" value="Login"/>
