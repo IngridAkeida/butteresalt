@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import './Header.css';
 
+
 import { Link } from "react-router-dom";
 
 import Button from '../Button/Button';
@@ -45,7 +46,7 @@ export default function Header ({yellow, color, props}) {
                 </form>   
                 
                 <div className="header--user">
-                    <Link to="Filmes" className={color ? 'color' : ''}>
+                    <Link to="Login" className={color ? 'color' : ''}>
                         <img src="image/user.png" alt="User"/>
                         <span>Olá, {x ? name : 'faça login!'}</span>
                     </Link>
