@@ -14,6 +14,7 @@ import Favoritos from './Pages/Favoritos/Favoritos';
 import MinhaLista from './Pages/Lista/Lista';
 import MaisInformacoes from './Pages/MaisInformacoes/MaisInformacoes';
 import Login from './Pages/Login/Login';
+import SignUp from './Pages/SignUp/SignUp';
 
 
 import {
@@ -37,7 +38,8 @@ ReactDOM.render(
             <Route path="favoritos" element={<Favoritos/>}/>
             <Route path="minhalista" element={<MinhaLista/>}/>
             <Route path="maisinformacoes" element={<MaisInformacoes/>}/>
-            <Route path="Login" element={<Login/>}/>          
+            <Route path="Login" element={<Login/>}/>    
+            <Route path="SignUp" element={<SignUp/>}/>      
         </Routes>
         <Footer/>
     </BrowserRouter>

@@ -50,6 +50,9 @@ export default function Header ({yellow, color, props}) {
                         <img src="image/user.png" alt="User"/>
                         <span>Olá, {x ? name : 'faça login!'}</span>
                     </Link>
+                 {/*Depois deletar essa tag*/} */}   <Link to="SignUp" className={color ? 'color' : ''}>
+                        <span>Cadastro, {x ? name : 'faça login!'}</span>
+                    </Link>
                 </div>
             </div>
             
