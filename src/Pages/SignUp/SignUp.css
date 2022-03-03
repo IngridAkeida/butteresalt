@@ -8,19 +8,46 @@
 
 .container1{
     width: 400px;
-    height: 600px;
+    height: 650px;
     background-color: #db7d00b3;
     border-radius: 10px;
     margin: 0 auto;
     margin-top: 120px;
+    padding-top: 20px;
     text-align: center;
-    
 }
 
 .signUp-text{
     font-size: 1.6em;
     text-transform: uppercase;
-    color: #000;     
+    color: #000; 
+    font-weight: bold;    
+}
+
+.signUp-others{
+    margin-top: 50px;
+    color: #000;
+    font-weight: bold;
+    font-size: 1em;
+}
+.signUp-signup{
+    list-style-type: none;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.signUp-signup a{
+    margin: 10px;
+}
+
+label{
+    display: block;
+    margin-bottom: 10px;
+    color: #000;
+    font-size: 1em;
+    font-weight: bold;   
 }
 
 input{
@@ -33,7 +60,7 @@ input{
     padding-left: 40px;
     border: none;
     background-repeat: no-repeat;
-    background-position: 10px;
+    background-position: 10px;   
 }
 
 input.email{
@@ -53,6 +80,7 @@ input.submit{
     width: 80%;
     text-transform: uppercase;
     font-weight: bold;
+    
 
     background: -webkit-linear-gradient(to right, #faa600, #f68a00, #faa600);
     background: -moz-linear-gradient(to right, #faa600, #f68a00, #faa600);
@@ -63,45 +91,15 @@ input.submit:hover{
     background: #f79300;
 }
 
-label{
-    display: block;
-    margin-bottom: 10px;
-    color: #000;
-    font-size: 1em;
-    font-weight: bold;
-}
-
-
-
-.signUp-others{
-    margin-top: 50px;
-    color: #000;
-    font-weight: bold;
-    font-size: 1em;
-    
-}
-.signUp-signup{
-    list-style-type: none;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-}
-
-.signUp-signup a{
-    margin: 10px;
-}
-
 .signIn-link{
     margin-top: 20px;
     text-transform: uppercase;
-    font-weight: bold;
-    
+    font-weight: bold;    
 }
 
 .signIn-link p{
     margin-top: 20px;
     font-weight: bold; 
-    text-transform:lowercase; 
+    text-transform:lowercase;
 }
 
