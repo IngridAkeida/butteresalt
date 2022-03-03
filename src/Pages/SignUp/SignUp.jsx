@@ -39,10 +39,10 @@ export default function SignUp () {
                     </div>
                     <div>
                         <label for="email">Email:</label>
-                        <input className="email" type="email" name="email" id="email" placeholder="Type your username"/>
+                        <input className="email" type="email" name="email" id="email" placeholder="Type your email"/>
                     </div>
                     <div>
-                        <label for="email">Senha:</label>
+                        <label for="email">Passaword:</label>
                         <input className="password" type="password" name="senha" id="senha" placeholder="Type your passaword"/>
                     </div>
                     <div>

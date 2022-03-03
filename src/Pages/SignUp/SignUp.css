@@ -100,6 +100,6 @@ input.submit:hover{
 .signIn-link p{
     margin-top: 20px;
     font-weight: bold; 
-    text-transform:lowercase;
+    text-transform: capitalize;
 }
 
