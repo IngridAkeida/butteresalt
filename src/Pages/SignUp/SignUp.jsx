@@ -29,7 +29,7 @@ export default function SignUp () {
                         </li>
                     </ul>
 
-                    <div>or</div>   
+                    <div className='or'>or</div>   
                 </div>
 
                 <form>

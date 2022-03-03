@@ -1,14 +1,14 @@
 .signUp{
     padding-top: 50px;
     padding-bottom: 50px;
-    margin-top: 200px;
+    margin-top: 150px;
     background-image: url(../../../public/image/background.png);
 }
 
 
 .container1{
     width: 400px;
-    height: 650px;
+    height: 680px;
     background-color: #db7d00b3;
     border-radius: 10px;
     margin: 0 auto;
@@ -41,7 +41,9 @@
 .signUp-signup a{
     margin: 10px;
 }
-
+.or{
+    margin: 20px;
+}
 label{
     display: block;
     margin-bottom: 10px;
