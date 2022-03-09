@@ -3,12 +3,13 @@ import './App.css';
 import tmdb from './Tmdb';
 
 import Header from './components/Header/Header';
+import Search from './components/Search/Search';
 import FeaturedMovie from './components/FeaturedMovie/FeaturedMovie';
 import MovieRow from './components/MovieRow/MovieRow';
 
 //import Login from
 //import More from
-//import Search from './Search';
+
 
 export default function App() {
 
@@ -65,6 +66,8 @@ export default function App() {
 
       <Header yellow={yellowHeader} color={colorHeader}/>
 
+      <Search/>
+
       {featuredData &&
         <FeaturedMovie item={featuredData}/>
       }
@@ -75,7 +78,7 @@ export default function App() {
         ))}
       </section>
 
-        {/*<Search/>*/}
+        
 
       {movieList <= 0 &&
         <div className='loading'>
