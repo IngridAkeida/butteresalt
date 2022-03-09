@@ -43,12 +43,13 @@ export default function Header ({yellow, color, props}) {
                             </Link>
                         </nav>
                     </div>
-                    <div className="header--tv">
-                        <nav>
-                            <Link to="/Séries" className={color ? 'color' : ''}>
-                               <p>Séries</p>
-                            </Link>
-                        </nav>
+                    <div className="header--tv">    
+                        <span className={color ? 'color' : ''}>Séries</span>
+                        <div  className="header--dropdown">
+                            <Link to="/Séries" ><p>Populares</p></Link>
+                            <Link to="/Séries" ><p>Em Breve</p></Link>
+                            <Link to="/Séries" ><p>Melhores</p></Link>
+                        </div>
                     </div>
                     <div className="header--actor">
                         <nav>

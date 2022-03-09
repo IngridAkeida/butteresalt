@@ -24,7 +24,7 @@
 }
 .featured--title{
     font-size: 20px;
-    margin-top: 10px;
+    
 }
 .featured--name{
     font-size: 60px;
@@ -85,7 +85,7 @@
 }
 
 .featured--genres{
-    margin-top: 10px;
+    margin: 10px 0;
     font-size: 18px;
     color: #999;
 }
