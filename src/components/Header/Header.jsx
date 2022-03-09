@@ -37,8 +37,8 @@ export default function Header ({yellow, color, props}) {
                 {/*MENU*/}
                 <div className="header--options">
                     <div className="header--film">
-                        <a className={color ? 'color' : ''}>Filmes</a>
-                        <div  className="header--dropdown">
+                        <a className={color ? 'color' : ''}><p>Filmes</p></a>
+                        <div className="header--dropdown">
                             <Link to="/filmes" ><p>Populares</p></Link>
                             <Link to="/filmes" ><p>Em Breve</p></Link>
                             <Link to="/filmes" ><p>Melhores</p></Link>
@@ -46,7 +46,7 @@ export default function Header ({yellow, color, props}) {
                     </div>
 
                     <div className="header--tv">    
-                        <a className={color ? 'color' : ''}>Séries</a>
+                        <a className={color ? 'color' : ''}><p>Séries</p></a>
                         <div  className="header--dropdown">
                             <Link to="/series" ><p>Populares</p></Link>
                             <Link to="/series" ><p>Em Breve</p></Link>
