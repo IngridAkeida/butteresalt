@@ -32,7 +32,7 @@ ReactDOM.render(
             <Route path="home" element={<Home/>}/>
             <Route path="sobre" element={<Sobre/>}/>
             <Route path="filmes" element={<Filmes/>}/>
-            <Route path="séries" element={<Series/>}/>
+            <Route path="series" element={<Series/>}/>
             <Route path="atores" element={<Atores/>}/>
             <Route path="diretores" element={<Diretores/>}/>
             <Route path="favoritos" element={<Favoritos/>}/>

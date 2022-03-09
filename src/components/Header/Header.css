@@ -46,6 +46,7 @@ header.yellow{
 .header--film{
     padding-left: 80px;
 }
+.header--film,
 .header--tv{
     position: relative;
     display: inline-block;
@@ -61,6 +62,7 @@ header.yellow{
     z-index: 9999;
 }
 
+.header--film:hover .header--dropdown,
 .header--tv:hover .header--dropdown {
     display: block;
   }

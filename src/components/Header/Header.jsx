@@ -37,20 +37,23 @@ export default function Header ({yellow, color, props}) {
                 {/*MENU*/}
                 <div className="header--options">
                     <div className="header--film">
-                        <nav>
-                            <Link to="Filmes" className={color ? 'color' : ''}>
-                               <p>Filmes</p>
-                            </Link>
-                        </nav>
-                    </div>
-                    <div className="header--tv">    
-                        <span className={color ? 'color' : ''}>Séries</span>
+                        <a className={color ? 'color' : ''}>Filmes</a>
                         <div  className="header--dropdown">
-                            <Link to="/Séries" ><p>Populares</p></Link>
-                            <Link to="/Séries" ><p>Em Breve</p></Link>
-                            <Link to="/Séries" ><p>Melhores</p></Link>
+                            <Link to="/filmes" ><p>Populares</p></Link>
+                            <Link to="/filmes" ><p>Em Breve</p></Link>
+                            <Link to="/filmes" ><p>Melhores</p></Link>
                         </div>
                     </div>
+
+                    <div className="header--tv">    
+                        <a className={color ? 'color' : ''}>Séries</a>
+                        <div  className="header--dropdown">
+                            <Link to="/series" ><p>Populares</p></Link>
+                            <Link to="/series" ><p>Em Breve</p></Link>
+                            <Link to="/series" ><p>Melhores</p></Link>
+                        </div>
+                    </div>
+
                     <div className="header--actor">
                         <nav>
                             <Link to="/Atores" className={color ? 'color' : ''}>
