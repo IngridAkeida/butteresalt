@@ -24,7 +24,7 @@ header.yellow{
     min-width: 750px; 
     display: flex;
     height: 70px;
-    border: 1px solid red ;
+    
 }
 
 .header--logo{
@@ -34,59 +34,37 @@ header.yellow{
 .header--logo img{
     height: 100%;
 }
-/*.header--ask{
-    display: flex;
-    align-items: center;
-
-
-.header--form{
-    height: 20px;
-    width: 500px;
-    border: 0;
-    border-radius: 15px 0 0 15px;
-    padding: 15px;
-    font-size: 16px;
-    border: 1px solid red ;
-}
-}*/
 
 .header--film,
 .header--tv,
 .header--actor,
 .header--director{
     padding: 0 20px;
-    font-size: 18px;
+    font-size: 20px;
     align-items: center;
 }
 .header--film{
     padding-left: 80px;
 }
 
-/*.header--favorite,
-.header--myList{
-    margin: 0 10px;
-}*/
 .header--search{
     padding-left: 5%;/*+-80px*/
     padding-right: 5%;/*+-80px*/
     font-size: 18px;
-    align-items: center;
+    align-items: center;    
 }
 
 .header--user{
-    height: 100%;
-    width: 100%;
+    border: 1px solid red;
 }
 
 .header--user span{
     height: 54px;
     font-size: 14px;
     margin-top: 20px;
-    margin-left: 10px;
+    margin-left: 100px;
     float: left;
-    display: flex;
-    
-    
+    display: flex;   
 }
 
 .header--user img{
@@ -94,19 +72,8 @@ header.yellow{
     margin-right: 5px;
     margin-top: 10px;
     float: right;
-    display: flex;
-    /*border: 1px solid red ;*/
-    
+    display: flex;   
 }
-
-
-
-/*.header--2{
-    padding: 0 190px 0 190px;
-    display: flex;
-    height: 50px;
-    justify-content: space-between;
-}*/
 
 .header--home,
 .header--options,
@@ -114,16 +81,6 @@ header.yellow{
     display: flex;
     align-items: center;
 }
-
-
-/*.header--homePage,
-.header--about,
-.header--help{
-    margin: 0 20px;
-    font-size: 18px;
-    align-items: center;
-    display: flex;
-}*/
 
 a{
     text-decoration: none;
