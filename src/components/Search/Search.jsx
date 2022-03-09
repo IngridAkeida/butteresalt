@@ -14,16 +14,16 @@ export default () => {
     return (
         <section className='search'>
             <div className='search--box'>
-                <div>Aqui você pode pesquisar os seus títulos</div>
-                <form>
-                    <ul>
-                        <li>
-                            fkkkfkfkf
-                        </li>
-                    </ul>
+                <div className="search--text">Aqui você pode pesquisar os seus títulos ou pessoas favoritas, e fazer sua lista personalizada!</div>
+                <form action="" className="search--form">
+                    <input 
+                        className="search--input" 
+                        type="text" 
+                        name="search" 
+                        id="search" 
+                    />
                     
-                </form>
-                      
+                </form> 
             </div>
         </section>
     );
