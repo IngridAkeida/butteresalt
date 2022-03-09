@@ -84,10 +84,12 @@ export default ({item}) => {
                             } 
                         </button>
                         
-                        <button href={`/watch/${item.id}`} className='featured--buttons3'><BookIcon/></button>
-                        <Link to="Filmes" className='featured--buttons3'>
+                        <button href={`/watch/${item.id}`} className='featured--buttons3'>
+                            
                             <BookIcon/>
-                        </Link>   
+                             
+                        </button>
+                         
                     </div>
                     <div className='featured--genres'><strong>Gêneros: </strong>{ genres.join(', ')}</div>
                 </div>       
