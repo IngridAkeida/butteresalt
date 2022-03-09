@@ -26,8 +26,8 @@ export default ({item}) => {
 
     //Para limitar a quantidade de caracteres da descricao do título
     let description = item.overview;
-    if(description.length > 250){
-        description = description.substring(0 , 250) + '...';
+    if(description.length > 200){
+        description = description.substring(0 , 200) + '...';
     }
 
     //Botões
@@ -44,8 +44,7 @@ export default ({item}) => {
     
     return (
         <section className='featured' style={{
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            
             backgroundImage:`url(https://image.tmdb.org/t/p/original${item.backdrop_path})`
 
         }}>

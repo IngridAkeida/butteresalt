@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: #000;
+    background: linear-gradient(#de0f3f, #db7d00);
     color: #fff;
     margin: 0;
     font-family: 'Noticia Text', serif;

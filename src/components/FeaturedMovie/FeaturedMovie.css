@@ -1,5 +1,10 @@
 .featured{
-    height: 100vh;
+    max-width: 1040px;
+    max-height: 526.5px;
+    background-position: center;
+    background-size: cover;   
+    margin-left: auto;
+    margin-right: auto;    
 }
 
 .featured--vertical{
@@ -20,10 +25,13 @@
 }
 .featured--title{
     font-size: 20px;
+    margin-top: 10px;
 }
 .featured--name{
     font-size: 60px;
     font-weight: bold;
+    text-shadow: 5px 5px 5px black;
+
 }
 
 .featured--info{
@@ -47,7 +55,7 @@
     margin-top: 15px;
     font-size: 20px;
     color: #999;
-    max-width: 40%;
+    max-width: 50%;
 }
 
 .featured--buttons{
