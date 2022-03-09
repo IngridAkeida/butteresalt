@@ -4,11 +4,10 @@ header{
     top: 0;
     left: 0;
     right: 0;
-    height: 70px;
+    height: 120px;
     justify-content: space-between;
     align-items: center;
     background-color: #000;
-    min-width: 750px;
     transition: all ease 0.5s;
 }
 
@@ -16,29 +15,26 @@ header.yellow{
     background: #fed305;
 }
 
-.header{
+.header--1{
     justify-content: space-between;
     align-items: center;
-    padding-left: 15%;
-    padding-right: 15%;
-    min-width: 750px; 
+    padding: 0 200px;
     display: flex;
     height: 70px;
-    border: 1px solid red ;
 }
 
 .header--logo{
-    height: 40px;
+    height: 50px;
 }
 
 .header--logo img{
     height: 100%;
+    border-radius: 7px;
 }
-/*.header--ask{
+.header--ask{
     display: flex;
     align-items: center;
-
-
+}
 .header--form{
     height: 20px;
     width: 500px;
@@ -46,67 +42,30 @@ header.yellow{
     border-radius: 15px 0 0 15px;
     padding: 15px;
     font-size: 16px;
-    border: 1px solid red ;
-}
-}*/
-
-.header--film,
-.header--tv,
-.header--actor,
-.header--director{
-    padding: 0 20px;
-    font-size: 18px;
-    align-items: center;
-}
-.header--film{
-    padding-left: 80px;
-}
-
-/*.header--favorite,
-.header--myList{
-    margin: 0 10px;
-}*/
-.header--search{
-    padding-left: 5%;/*+-80px*/
-    padding-right: 5%;/*+-80px*/
-    font-size: 18px;
-    align-items: center;
 }
 
 .header--user{
     height: 100%;
-    width: 100%;
-}
-
-.header--user span{
-    height: 54px;
-    font-size: 14px;
-    margin-top: 20px;
-    margin-left: 10px;
-    float: left;
-    display: flex;
-    
-    
 }
 
 .header--user img{
-    height: 54px;
-    margin-right: 5px;
+    height: 100%; 
     margin-top: 10px;
-    float: right;
-    display: flex;
-    /*border: 1px solid red ;*/
-    
+    margin-right: 5px;
+    vertical-align: middle;
 }
 
+.header--user span{
+    font-size: 20px;
+    margin-top: 10px;
+}
 
-
-/*.header--2{
+.header--2{
     padding: 0 190px 0 190px;
     display: flex;
     height: 50px;
     justify-content: space-between;
-}*/
+}
 
 .header--home,
 .header--options,
@@ -115,15 +74,33 @@ header.yellow{
     align-items: center;
 }
 
+.header--options{
+    margin-right: 190px;
+}
 
-/*.header--homePage,
+.header--homePage,
 .header--about,
 .header--help{
     margin: 0 20px;
-    font-size: 18px;
+    font-size: 20px;
     align-items: center;
     display: flex;
-}*/
+}
+
+.header--film,
+.header--tv,
+.header--actor,
+.header--director{
+    margin: 0 20px;
+    padding: 0 30px;
+    font-size: 20px;
+    align-items: center;
+}
+
+.header--favorite,
+.header--myList{
+    margin: 0 10px;
+}
 
 a{
     text-decoration: none;
@@ -140,9 +117,6 @@ a:hover{
     color: #de0f3f;
     font-weight: bold;
 }
-
-
-/*
 
 @media (max-width:760px) {
     .header--1{
@@ -196,5 +170,3 @@ a:hover{
     
 
 }
-
-*/

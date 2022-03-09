@@ -4,7 +4,7 @@ import './Header.css';
 
 import { Link } from "react-router-dom";
 
-import Button from '../Button/Button';
+
 
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ReadMoreIcon from '@mui/icons-material/ReadMore';
@@ -26,61 +26,15 @@ export default function Header ({yellow, color, props}) {
     return(
         <header className={yellow ? 'yellow' : ''}>
 
-            <div className="header--1">
-
+            <div className="header">
+                {/*LOGO*/}
                 <div className="header--logo">
                     <a href="/">
                         <img src="image/butteresaltyellow.png" alt="butteresaltyellow"/>
                     </a>
                 </div>
 
-                <form action="" className="header--ask">
-                    <input 
-                        className="header--form" 
-                        type="text" 
-                        name="search" 
-                        id="search" 
-                        onChange={(e)=> setSearch(e.target.value)}
-                    />
-                    <Button/> 
-                </form>   
-                
-                <div className="header--user">
-                    <Link to="Login" className={color ? 'color' : ''}>
-                        <img src="image/user.png" alt="User"/>
-                        <span>Olá, {x ? name : 'faça login!'}</span>
-                    </Link>
-                 {/*Depois deletar essa tag*/} */}   <Link to="SignUp" className={color ? 'color' : ''}>
-                        <span>Cadastro, {x ? name : 'faça login!'}</span>
-                    </Link>
-                </div>
-            </div>
-            
-            <div className="header--2">
-
-                <div className="header--home">
-                    <div className= "header--homePage">
-                        <nav>
-                            <Link to="/" className={color ? 'color' : ''}>
-                                <p>Home</p>
-                            </Link>
-                        </nav>
-                    </div>
-                    <div className= "header--about">
-                        <nav>
-                            <Link to="/Sobre" className={color ? 'color' : ''}>
-                                <p>Sobre nós</p>
-                            </Link>
-                        </nav>
-                    </div>
-                    <div className= "header--help">
-                        <nav>
-                            <Link to="/Sobre" className={color ? 'color' : ''}>
-                                <p>Ajuda</p>
-                            </Link>
-                        </nav>
-                    </div>
-                </div>
+                {/*MENU*/}
                 <div className="header--options">
                     <div className="header--film">
                         <nav>
@@ -112,24 +66,23 @@ export default function Header ({yellow, color, props}) {
                     </div>
                 </div>
 
-                <div className="header--personal">
-                    <div className="header--favorite">
+                {/*PESQUISA SÓ O ICON, ABRIR POPUP DE PESQUISA, CLIQUE FORA CANCELA*/}
+                <div className="header--search">
                         <nav>
-                            <Link to="/Favoritos" className={color ? 'color' : ''}>
-                               <p><FavoriteIcon style={{fontsize: 50}}/></p>
+                            <Link to="/Séries" className={color ? 'color' : ''}>
+                               <p>Fake</p>
                             </Link>
                         </nav>
                     </div>
-                    <div className="header--myList">
-                        <nav>
-                            <Link to="/MinhaLista" className={color ? 'color' : ''}>
-                               <p><ReadMoreIcon style={{fontsize:50}}/></p>
-                            </Link>
-                        </nav>
-                    </div>
-                </div>
+                {/*USER*/}
                 
-            </div>      
+                <div className="header--user">
+                    <Link to="Login" className={color ? 'color' : ''}>
+                        <span>Olá, {x ? name : 'faça login!'}</span>
+                        <img src="image/user.png" alt="User"/>   
+                    </Link>
+                </div>
+            </div>                  
         </header>        
     );
 }

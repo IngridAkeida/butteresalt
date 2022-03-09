@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nixie+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 * {
     box-sizing: border-box;
@@ -9,7 +8,7 @@ body{
     background-color: #000;
     color: #fff;
     margin: 0;
-    font-family: 'Nixie One', cursive;
+    font-family: 'Noticia Text', serif;
 }
 
 .list{
