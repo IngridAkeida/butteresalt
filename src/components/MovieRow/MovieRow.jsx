@@ -26,10 +26,10 @@ export default ({title, items, item}) => {
     }
     const handleRightArrow = () => {
         let x = scrollX - Math.round(window.innerWidth/2);
-        let listW = items.results.length * 230;
+        let listW = items.results.length * 220;
 
         if((window.innerWidth - listW) > x){
-            x = (window.innerWidth - listW) - 60;
+            x = (window.innerWidth - listW) - 80;
         }
         setScrollX(x);
     }
@@ -57,7 +57,7 @@ export default ({title, items, item}) => {
                         let bigTitle = (item.title || item.name);
                         let bigTitleStyles = {};
                         if(bigTitle.length > 25){
-                            bigTitleStyles = {marginTop: '0'};
+                            bigTitleStyles = {paddingTop: '30'};
                         }
 
                         let firstDate = (item.first_air_date || item.release_date);
@@ -87,7 +87,7 @@ export default ({title, items, item}) => {
                         <div key={key} className='movieRow--item'>
                             <img key={key} src={`https://image.tmdb.org/t/p/original${item.poster_path}`} alt={bigTitle}/>
                             <div className='movieRow--info'>
-                                <div className='movieRow--data'>
+                                <div className='movieRow--data' style={bigTitleStyles}>
                                     <div className='movieRow--title'>
                                         {bigTitle}
                                     </div>              
@@ -100,7 +100,7 @@ export default ({title, items, item}) => {
                                     }  
                                     <div className='movieRow--year'>{year}</div>
                                 </div>
-                                <div className='movieRow--buttons' style={bigTitleStyles}>              
+                                <div className='movieRow--buttons'>              
                                     <button onClick={addOnClick} href={`/`} className='movieRow--buttons1' >
                                         {
                                             add === true ? (
@@ -119,13 +119,15 @@ export default ({title, items, item}) => {
                                             )
                                         } 
                                     </button>
-                                    <Link to="Filmes" className='movieRow--buttons3'>
+                                    <button href={`/watch/${item.id}`} className='movieRow--buttons3'>
+                                        
                                         <BookIcon/>
-                                    </Link>
+                                        
+                                    </button>
 
                                 </div>
                                 <div className='movieRow--genres'>Gêneros: {genres2.join(', ')}</div>
-                            </div>
+                            </div>*/}
                         </div>
                     )
                     })}
