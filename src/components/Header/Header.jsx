@@ -1,18 +1,36 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import './Header.css';
 
 
 import { Link } from "react-router-dom";
 
-
-
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ReadMoreIcon from '@mui/icons-material/ReadMore';
-
-
-
 // eslint-disable-next-line import/no-anonymous-default-export
 export default function Header ({yellow, color, props}) {
+
+    // Mudar a cor do Header
+
+   /* const [ yellowHeader, setYellowHeader ] = useState(false);
+    const [ colorHeader, setColorHeader ] = useState(false);
+
+    useEffect(()=>{
+        const scrollListener = () =>{
+          if(window.scrollY > 10){
+            setYellowHeader(true);
+            setColorHeader(true);
+          } else {
+            setYellowHeader(false);
+            setColorHeader(false);
+          }
+        }
+        window.addEventListener('scroll', scrollListener);
+    
+        return () => {
+          window.removeEventListener('scroll', scrollListener);
+        }
+    
+    }, []);*/
+
+
 
     const [search, setSearch] = useState("");
 
