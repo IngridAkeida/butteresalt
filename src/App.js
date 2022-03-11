@@ -18,6 +18,7 @@ export default function App() {
   const [ yellowHeader, setYellowHeader ] = useState(false);
   const [ colorHeader, setColorHeader ] = useState(false);
 
+  //Pagar as informacoes da lista
 
   useEffect(() => {
     const loadAll = async () => {
@@ -41,6 +42,8 @@ export default function App() {
 
     loadAll();
   }, []);
+
+  //Modificar ao descer da tela 
 
   useEffect(()=>{
     const scrollListener = () =>{

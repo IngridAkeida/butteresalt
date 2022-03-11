@@ -10,9 +10,7 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import BookIcon from '@mui/icons-material/Book';
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default ({item}) => {
-
-    
+export default function FeaturedMovie ({item}) {
 
     // Para pegar o ano do titilo
     let releaseDate = new Date (item.release_date);
@@ -24,17 +22,22 @@ export default ({item}) => {
     }
     //console.log(item);
 
+
     //Para limitar a quantidade de caracteres da descricao do título
     let description = item.overview;
     if(description.length > 200){
         description = description.substring(0 , 200) + '...';
     }
 
+    //Temporadas
+
+    let seasons = item.number_of_seasons;
+
     //Botões
     const [add, setAdd] = useState(false);
     const [fav, setFav] = useState(false);
 
-    //Funcoes 
+    //Funcoes dos botões
     const addOnClick = () =>{
         setAdd(!add)
     }
@@ -59,7 +62,13 @@ export default ({item}) => {
                     <div className='featured--info'>
                         <div className='featured--points'>{item.vote_average} Pontos </div>
                         <div className='featured--year'>{releaseDate.getFullYear()}</div>
-                        {/*<div className='featured--seasons'>{item.number_of_seasons} Temporada{item.number_of_seasons !== 1 ? 's' : ''}</div>*/}
+                        {
+                            seasons > 0 ? (
+                                <div className='featured--seasons'>{seasons} Temporada
+                                    {seasons > 1 ? 's' : ''}
+                                </div>
+                            ) : null
+                        } 
                     </div>
                     <div className='featured--description'>{description}</div>
                     <div className='featured--buttons'>
