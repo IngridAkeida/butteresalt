@@ -20,7 +20,7 @@ export default function FeaturedMovie ({item}) {
     for (let i in item.genres){
         genres.push(item.genres[i].name);
     }
-    //console.log(item);
+    console.log(item);
 
 
     //Para limitar a quantidade de caracteres da descricao do título
@@ -100,7 +100,7 @@ export default function FeaturedMovie ({item}) {
                         </button>
                          
                     </div>
-                    <div className='featured--genres'><strong>Gêneros: </strong>{ genres.join(', ')}</div>
+                    <div className='featured--genres'><strong>Gêneros: </strong>{genres.join(', ')}</div>
                 </div>       
             </div>
         </section>

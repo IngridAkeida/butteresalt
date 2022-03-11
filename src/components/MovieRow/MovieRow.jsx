@@ -13,7 +13,9 @@ import BookIcon from '@mui/icons-material/Book';
 
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default ({title, items, item}) => {
+export default ({title, items}) => {
+
+    // funcionalidade das setas 
     const [scrollX, setScrollX] = useState(0);
 
     const handleLeftArrow = () => {
@@ -64,10 +66,13 @@ export default ({title, items, item}) => {
                         let date = new Date (firstDate);
                         let year = date.getFullYear();
 
-                        let genres2 =[];
-                        for (let i in item.genres){
-                            genres2.push( item.genres[i].name);
+                        //Para pegar o gênero do título 
+                        let genres =[];
+                        for (let i in item.genre_ids){
+                            genres.push( item.genre_ids[i].name);
                         }
+
+                        //console.log(item);
 
                         let points = item.vote_average;
 
@@ -126,7 +131,7 @@ export default ({title, items, item}) => {
                                     </button>
 
                                 </div>
-                                <div className='movieRow--genres'>Gêneros: {genres2.join(', ')}</div>
+                                <div className='movieRow--genres'>Gêneros: {genres.join(', ')}</div>
                             </div>*/}
                         </div>
                     )
