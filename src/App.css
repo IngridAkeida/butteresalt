@@ -4,11 +4,17 @@
     box-sizing: border-box;
 }
 
+:root {
+    --main-bg-color: pink;
+    
+  }
+
+
 body{
     background: linear-gradient(#de0f3f, #db7d00);
     color: #fff;
     margin: 0;
-    font-family: 'Noticia Text', serif;
+    font-family: 'Noticia Text', 'Times New Roman', Times, serif;
 }
 
 .link{
