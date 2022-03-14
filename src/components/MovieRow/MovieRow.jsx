@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './MovieRow.css'
 import { Link } from "react-router-dom";
 
@@ -14,6 +14,7 @@ import BookIcon from '@mui/icons-material/Book';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default ({title, items}) => {
+
 
     // funcionalidade das setas 
     const [scrollX, setScrollX] = useState(0);
@@ -35,6 +36,7 @@ export default ({title, items}) => {
         }
         setScrollX(x);
     }
+    
 
     return (
         <div className='movieRow'>
